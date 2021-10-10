@@ -25,9 +25,9 @@ SELECT * FROM Netflix_Movie_Show_List;
 CREATE TABLE Netflix_Movies_IMDB (
     Media_ID INT NOT NULL PRIMARY KEY,
     Category_ID VARCHAR NOT NULL,
-    IMDB_Score DOUBLE NOT NULL,
-	FOREIGN KEY (Media_ID) REFERENCES Netflix_Movie_Show_List(Media_ID),
-	FOREIGN KEY (Category_ID) REFERENCES Netflix_Movie_Show_List(Category_ID));
+    IMDB_Score DECIMAL NOT NULL);
+ALTER TABLE Netflix_Movies_IMDB
+ADD FOREIGN KEY (Media_ID) REFERENCES Netflix_Movie_Show_List(Media_ID);
 --Check data import
 SELECT * FROM Netflix_Movies_IMDB;
 
@@ -38,8 +38,7 @@ CREATE TABLE Netflix_Movies_Lang (
     Media_ID INT NOT NULL,
     Category_ID VARCHAR NOT NULL,
     Language VARCHAR NOT NULL,
-	FOREIGN KEY (Media_ID) REFERENCES Netflix_Movie_Show_List(Media_ID),
-	FOREIGN KEY (Category_ID) REFERENCES Netflix_Movie_Show_List(Category_ID));
+	FOREIGN KEY (Media_ID) REFERENCES Netflix_Movie_Show_List(Media_ID));
 --Check data import
 SELECT * FROM Netflix_Movies_Lang;
 
@@ -50,8 +49,7 @@ CREATE TABLE Netflix_Movies_Genre (
     Media_ID INT NOT NULL,
     Category_ID VARCHAR NOT NULL,
     Genre VARCHAR NOT NULL,
-	FOREIGN KEY (Media_ID) REFERENCES Netflix_Movie_Show_List(Media_ID),
-	FOREIGN KEY (Category_ID) REFERENCES Netflix_Movie_Show_List(Category_ID));
+	FOREIGN KEY (Media_ID) REFERENCES Netflix_Movie_Show_List(Media_ID));
 --Check data import
 SELECT * FROM Netflix_Movies_Genre;
 
@@ -61,8 +59,7 @@ CREATE TABLE Netflix_Shows_Seasons (
    	Media_ID INT NOT NULL PRIMARY KEY,
     Category_ID VARCHAR NOT NULL,
     No_of_Seasons INT NOT NULL,
-    FOREIGN KEY (Media_ID) REFERENCES Netflix_Movie_Show_List(Media_ID),
-	FOREIGN KEY (Category_ID) REFERENCES Netflix_Movie_Show_List(Category_ID));
+    FOREIGN KEY (Media_ID) REFERENCES Netflix_Movie_Show_List(Media_ID));
 --Check data import
 SELECT * FROM Netflix_Shows_Seasons;
 
@@ -72,8 +69,7 @@ CREATE TABLE Netflix_Shows_Genre (
     Media_ID INT NOT NULL PRIMARY KEY,
     Category_ID VARCHAR NOT NULL,
     Genre VARCHAR NOT NULL,
-    FOREIGN KEY (Media_ID) REFERENCES Netflix_Movie_Show_List(Media_ID),
-	FOREIGN KEY (Category_ID) REFERENCES Netflix_Movie_Show_List(Category_ID));
+    FOREIGN KEY (Media_ID) REFERENCES Netflix_Movie_Show_List(Media_ID));
 --Check data import
 SELECT * FROM Netflix_Shows_Genre;
 
@@ -98,9 +94,9 @@ CREATE TABLE Neflix_Rev_Sub_USC (
     Quarter_ID VARCHAR NOT NULL PRIMARY KEY,
     Area_Name VARCHAR NOT NULL,
     Revenue INT NOT NULL,
-    Rev_Quarterly_Change DOUBLE NOT NULL,
+    Rev_Quarterly_Change DECIMAL NOT NULL,
     Subscribers INT NOT NULL,
-    Sub_Quarterly_Change DOUBLE NOT NULL,
+    Sub_Quarterly_Change DECIMAL NOT NULL,
     FOREIGN KEY (Quarter_ID) REFERENCES Quarters(Quarter_ID));
 --Check data import
 SELECT * FROM Neflix_Rev_Sub_USC;
@@ -111,9 +107,9 @@ CREATE TABLE Neflix_Rev_Sub_EMEA (
     Quarter_ID VARCHAR NOT NULL PRIMARY KEY,
     Area_Name VARCHAR NOT NULL,
     Revenue INT NOT NULL,
-    Rev_Quarterly_Change DOUBLE NOT NULL,
+    Rev_Quarterly_Change DECIMAL NOT NULL,
     Subscribers INT NOT NULL,
-    Sub_Quarterly_Change DOUBLE NOT NULL,
+    Sub_Quarterly_Change DECIMAL NOT NULL,
     FOREIGN KEY (Quarter_ID) REFERENCES Quarters(Quarter_ID));
 --Check data import
 SELECT * FROM Neflix_Rev_Sub_EMEA;
@@ -124,9 +120,9 @@ CREATE TABLE Neflix_Rev_Sub_LA (
     Quarter_ID VARCHAR NOT NULL PRIMARY KEY,
     Area_Name VARCHAR NOT NULL,
     Revenue INT NOT NULL,
-    Rev_Quarterly_Change DOUBLE NOT NULL,
+    Rev_Quarterly_Change DECIMAL NOT NULL,
     Subscribers INT NOT NULL,
-    Sub_Quarterly_Change DOUBLE NOT NULL,
+    Sub_Quarterly_Change DECIMAL NOT NULL,
     FOREIGN KEY (Quarter_ID) REFERENCES Quarters(Quarter_ID));
 --Check data import
 SELECT * FROM Neflix_Rev_Sub_LA;
@@ -137,9 +133,9 @@ CREATE TABLE Neflix_Rev_Sub_AP (
     Quarter_ID VARCHAR NOT NULL PRIMARY KEY,
     Area_Name VARCHAR NOT NULL,
     Revenue INT NOT NULL,
-    Rev_Quarterly_Change DOUBLE NOT NULL,
+    Rev_Quarterly_Change DECIMAL NOT NULL,
     Subscribers INT NOT NULL,
-    Sub_Quarterly_Change DOUBLE NOT NULL,
+    Sub_Quarterly_Change DECIMAL NOT NULL,
     FOREIGN KEY (Quarter_ID) REFERENCES Quarters(Quarter_ID));
 --Check data import
 SELECT * FROM Neflix_Rev_Sub_AP;
