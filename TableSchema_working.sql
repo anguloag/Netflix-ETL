@@ -93,9 +93,9 @@ SELECT * FROM Netflix_Stock_Prices;
 CREATE TABLE Neflix_Rev_Sub_USC (
     Quarter_ID VARCHAR NOT NULL PRIMARY KEY,
     Area_Name VARCHAR NOT NULL,
-    Revenue INT NOT NULL,
+    Revenue DECIMAL NOT NULL,
     Rev_Quarterly_Change DECIMAL NOT NULL,
-    Subscribers INT NOT NULL,
+    Subscribers DECIMAL NOT NULL,
     Sub_Quarterly_Change DECIMAL NOT NULL,
     FOREIGN KEY (Quarter_ID) REFERENCES Quarters(Quarter_ID));
 --Check data import
@@ -106,9 +106,9 @@ SELECT * FROM Neflix_Rev_Sub_USC;
 CREATE TABLE Neflix_Rev_Sub_EMEA (
     Quarter_ID VARCHAR NOT NULL PRIMARY KEY,
     Area_Name VARCHAR NOT NULL,
-    Revenue INT NOT NULL,
+    Revenue DECIMAL NOT NULL,
     Rev_Quarterly_Change DECIMAL NOT NULL,
-    Subscribers INT NOT NULL,
+    Subscribers DECIMAL NOT NULL,
     Sub_Quarterly_Change DECIMAL NOT NULL,
     FOREIGN KEY (Quarter_ID) REFERENCES Quarters(Quarter_ID));
 --Check data import
@@ -119,9 +119,9 @@ SELECT * FROM Neflix_Rev_Sub_EMEA;
 CREATE TABLE Neflix_Rev_Sub_LA (
     Quarter_ID VARCHAR NOT NULL PRIMARY KEY,
     Area_Name VARCHAR NOT NULL,
-    Revenue INT NOT NULL,
+    Revenue DECIMAL NOT NULL,
     Rev_Quarterly_Change DECIMAL NOT NULL,
-    Subscribers INT NOT NULL,
+    Subscribers DECIMAL NOT NULL,
     Sub_Quarterly_Change DECIMAL NOT NULL,
     FOREIGN KEY (Quarter_ID) REFERENCES Quarters(Quarter_ID));
 --Check data import
@@ -132,9 +132,9 @@ SELECT * FROM Neflix_Rev_Sub_LA;
 CREATE TABLE Neflix_Rev_Sub_AP (
     Quarter_ID VARCHAR NOT NULL PRIMARY KEY,
     Area_Name VARCHAR NOT NULL,
-    Revenue INT NOT NULL,
+    Revenue DECIMAL NOT NULL,
     Rev_Quarterly_Change DECIMAL NOT NULL,
-    Subscribers INT NOT NULL,
+    Subscribers DECIMAL NOT NULL,
     Sub_Quarterly_Change DECIMAL NOT NULL,
     FOREIGN KEY (Quarter_ID) REFERENCES Quarters(Quarter_ID));
 --Check data import
