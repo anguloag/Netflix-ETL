@@ -46,11 +46,11 @@ Last, we modified the Netflix Stock Price (All Time) Dataset to create the Netfl
 After cleaning the data, we used SQLAlchemy to import all of the tables into those created by our schema in PostgreSQL. As part of this process we had to change all of our columns to lowercase first so that they matched SQLalchemy’s table conversion. 
 
 Some additional cleanup we performed included the following:
-●	Changed order of columns to be consistent across all tables.
-●	Converted format of Quarter_IDs to be consistent across all tables.
-●	Formatted date/premiere rows to datetime and the same date format.
-●	Split rows with combined data cells into single data rows.
-●	Exported  a series of CSV files of our cleaned dataframes for storage purposes.
+-	Changed order of columns to be consistent across all tables.
+-	Converted format of Quarter_IDs to be consistent across all tables.
+-	Formatted date/premiere rows to datetime and the same date format.
+-	Split rows with combined data cells into single data rows.
+-	Exported  a series of CSV files of our cleaned dataframes for storage purposes.
 
 ## Load:
 We wrote a table schemata based upon the sql code exported from QuickDBD. Once the tables were created in pgAdmin, we imported our cleaned data using SQLAlchemy. With our final database, we performed three queries to display joined tables.
