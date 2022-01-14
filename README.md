@@ -1,8 +1,5 @@
-# Sociotracker-Project2
+# Team-Sociotracker - Netflix ETL
 Final Report saved as a DOCX with images within GitHub. Below is a simplified version of that report.
-  
-## Netflix ETL - Final Report
-Project #2
 
 Team Sociotracker: Angela Angulo, Bonnie Bailey, Joseph March, Marisa Kiger
 
