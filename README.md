@@ -60,7 +60,8 @@ Some additional cleanup we performed included the following:
 ## Load:
 We wrote a table schemata based upon the sql code exported from QuickDBD. Once the tables were created in pgAdmin, we imported our cleaned data using SQLAlchemy. With our final database, we performed three queries to display joined tables.
 
-Query 1 -  In order to display a summary of all the information for each Netflix original movie and show, we used Join and Union statements to present the following information within the same table: 
+### Query 1 
+In order to display a summary of all the information for each Netflix original movie and show, we used Join and Union statements to present the following information within the same table: 
 -	The Netflix_Movie_Show_List columns “Media_ID”, “Quarter_ID”, “Category_ID”, “Title”, and “Premier”
 -	The Netflix_Movies_Lang column “Language”
 -	The Netflix_Movies_IMDB column “IMDB_Score”
@@ -69,21 +70,23 @@ Query 1 -  In order to display a summary of all the information for each Netflix
 
 ![Query1](../main/Images/join1.JPG)
 
-Query 2 -  To display a financial comparison between stock prices, revenue, and number of subscribers for the United States and Canada per quarter, we used Join statements, as well as a subquery to calculate the minimum, maximum, and average closing stock prices grouped by quarter, to present the following information within the same table:
+### Query 2
+To display a financial comparison between stock prices, revenue, and number of subscribers for the United States and Canada per quarter, we used Join statements, as well as a subquery to calculate the minimum, maximum, and average closing stock prices grouped by quarter, to present the following information within the same table:
 -	The Quarter column “Quarter_ID”
 -	The calculated Min, Avg, and Max of the Netflix_Stock_Prices “Close” column
 -	The Neflix_Rev_Sub_USC columns “Area_Name”, “Revenue”, “Rev_Quarterly_Change”, “Subscribers”, “Sub_Quarterly_Change”
 
 ![Query2](../main/Images/join2.JPG)
 
-Query 3 -  Our final query brought together the data from both of the previous queries to display the media and financial information in one table.
+### Query 3 
+Our final query brought together the data from both of the previous queries to display the media and financial information in one table.
 
 ![Query3](../main/Images/join3.JPG)
 
 ## Summary:
 The datasets we created can be used to compare financial outcomes to media released on a quarterly basis for Netflix. Data can be used to compare subscriber and revenue increases by geographical area, as well as stock prices by date or quarter. We also maintained the IMBD, genre, and language data so that comparisons can be formed based on these unique areas. Our SQL joined tables allow for a user to recognize relationships between differing elements of financial outcomes and media releases.
 
-## Contacts
+## Contacts:
 Angela Angulo: anguloag@vcu.edu
 
 Bonnie Bailey: bonnie.lyn@hotmail.com
